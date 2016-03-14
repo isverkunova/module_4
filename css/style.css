@@ -1,12 +1,12 @@
 body {
-    background: url(../img/background.jpg) repeat-y;
+    background: url('../img/background.jpg') repeat-x;
     font-family: Tahoma, sans-serif;
-    box-sizing: inherit;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
 }
 
-.clearfix:after {
+.clearfix::after {
     display: block;
     clear: both;
     content: '';
@@ -14,11 +14,11 @@ body {
 
 .wrapper {
     width: 1000px;
-    background-color: #fff;
     margin: 0 auto;
-    -webkit-box-shadow: 0 0 10px 5px rgba(46,46,46,1);
-    -moz-box-shadow: 0 0 10px 5px rgba(46,46,46,1);
-    box-shadow: 0 0 10px 5px rgba(46,46,46,1);
+    background-color: #fff;
+    -moz-box-shadow: 0 0 10px 5px rgba(46, 46, 46, 1);
+    -webkit-box-shadow: 0 0 10px 5px rgba(46, 46, 46, 1);
+    box-shadow: 0 0 10px 5px rgba(46, 46, 46, 1);
 }
 
 .header {
@@ -27,29 +27,30 @@ body {
 
 .logo {
     float: left;
-    text-decoration: none;
     color: #37a2b6;
     text-align: center;
+    text-decoration: none;
 }
 
 .contacts {
     width: 130px;
+    margin: -5px 0 27px;
     float: right;
-    margin: -5px 0 27px 0;
 }
+
 .contacts p:first-child {
     font-weight: bold;
 }
 
 .contacts p {
-    font-size: 12px;
     color: #128aa7;
+    font-size: 12px;
     line-height: 19px;
 }
 
 .flags {
-    clear: right;
     float: right;
+    clear: right;
 }
 
 .flags a {
@@ -57,41 +58,75 @@ body {
     font-size: 10px;
 }
 
-.india, .nepal, .tibet, .butan, .shri-lanka, .maldivi {
+.india,
+.nepal,
+.tibet,
+.butan,
+.shri-lanka,
+.maldivi {
     width: 57px;
     margin: 0 auto;
-    text-align: center;
     float: right;
+    text-align: center;
 }
 /* END header */
 
 .top-menu {
     width: 1000px;
-    background-color: #333333;
-    -webkit-box-shadow: 0 5px 4px 3px rgba(46,46,46,0.85);
-    -moz-box-shadow: 0 5px 4px 3px rgba(46,46,46,0.85);
-    box-shadow: 0 5px 4px 3px rgba(46,46,46,0.85);
+    margin-bottom: 10px;
+    background-color: #333;
+    -moz-box-shadow: 0 5px 4px 3px rgba(46, 46, 46, .85);
+    -webkit-box-shadow: 0 5px 4px 3px rgba(46, 46, 46, .85);
+    box-shadow: 0 5px 4px 3px rgba(46, 46, 46, .85);
 }
 
 .menu {
     padding: 0 55px;
 }
 
-.menu li {
+.menu::after {
+    content: '';
+    clear: both;
+}
+
+.menu > li {
     float: left;
 }
 
-.menu a {
-    color: #fff;
-    padding: 0 30px;
-    display: block;
-    line-height: 40px;
-    text-decoration: none;
-    font-size: 14px;
+.menu li {
+    position: relative;
 }
 
-.submenu li {
+.menu a {
+    display: block;
+    padding: 0 30px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+.submenu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    -moz-box-shadow: 0 5px 4px 3px rgba(46, 46, 46, .85);
+    -webkit-box-shadow: 0 5px 4px 3px rgba(46, 46, 46, .85);
+    box-shadow: 0 5px 4px 3px rgba(46, 46, 46, .85);
+}
+
+.submenu a {
+    width: 100%;
+    padding: 10px 55px 10px 10px;
+    font-size: 14px;
+    line-height: 5px;
+}
+
+.menu li:hover .submenu {
+    display: block;
 }
 /* END top-menu */
 
@@ -101,35 +136,35 @@ body {
 
 .info-block {
     width: 165px;
-    float: left;
-    padding: 10px 24px 2000px 15px;
     margin-bottom: -2000px;
-    background-color: #edeef0;
-    border-left: 1px solid #c7cacf;
+    padding: 0 24px 2000px 15px;
+    float: left;
     border-right: 1px solid #c7cacf;
-    text-align: center;
+    border-left: 1px solid #c7cacf;
+    background-color: #edeef0;
     color: #424c43;
     font-size: 13px;
     line-height: 20px;
+    text-align: center;
 }
 
 .news-block {
     width: 165px;
-    float: right;
-    padding: 10px 24px 2000px 15px;
     margin-bottom: -2000px;
-    background-color: #edeef0;
-    border-left: 1px solid #c7cacf;
+    padding: 0 24px 2000px 15px;
+    float: right;
     border-right: 1px solid #c7cacf;
-    text-align: center;
+    border-left: 1px solid #c7cacf;
+    background-color: #edeef0;
     color: #424c43;
     font-size: 13px;
     line-height: 20px;
+    text-align: center;
 }
 
 .empty-block {
-    padding-bottom: 2000px;
     margin-bottom: -2000px;
+    padding-bottom: 2000px;
     float: left;
     background-color: #fff;
 }
@@ -142,8 +177,8 @@ body {
 /*END container*/
 
 .footer {
-    text-align: center;
-    font-size: 12px;
     color: #fff;
+    font-size: 12px;
     line-height: 30px;
-}
+    text-align: center;
+    }
