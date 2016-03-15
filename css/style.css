@@ -85,8 +85,8 @@ body {
 }
 
 .menu::after {
-    content: '';
     clear: both;
+    content: '';
 }
 
 .menu > li {
